@@ -23,14 +23,7 @@ public class TeacherController {
         return "teacher/list";
     }
 
-    public ResponseEntity<List<Teacher>> getAllTeachers() {
-        try {
-            List<Teacher> teachers = teacherService.findAll();
-            return new ResponseEntity<>(teachers, HttpStatus.OK); //ResponseEntity -  to klasa z Spring Framework, która reprezentuje odpowiedź HTTP zwracaną przez metodę kontrolera.
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
+
 
 
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository //adnotacja do usunięcia w momencie zmiany repository na interface
-public class TeacherRepository {
+public class TeacherRepository  {
 
     private static final List<Teacher> dummyTeacherDb = new ArrayList<>();
 
@@ -19,12 +19,12 @@ public class TeacherRepository {
     @PostConstruct
     private static void init() {
         Teacher teacher1 = Teacher.builder()
-                .id(1)
+                .id(1L)
                 .firstName("Jan")
                 .lastName("Kowalski")
                 .build();
         Teacher teacher2 = Teacher.builder()
-                .id(2)
+                .id(2L)
                 .firstName("Janusz")
                 .lastName("Kowal")
                 .build();
@@ -33,3 +33,4 @@ public class TeacherRepository {
     }
 
 }
+
