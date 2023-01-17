@@ -1,6 +1,8 @@
 package com.masters.coding.student.model;
 
+import com.masters.coding.language.model.Language;
 import com.masters.coding.teacher.model.Teacher;
+import jakarta.persistence.*;
 import lombok.*;
 
 @AllArgsConstructor
@@ -8,10 +10,14 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+@Entity
 public class Student {
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String firstName;
     private String lastName;
-    private String language;
-
+    @ManyToOne
+    @JoinColumn(name = "language_id")
+    private Language language;
 }
