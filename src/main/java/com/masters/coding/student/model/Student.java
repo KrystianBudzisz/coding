@@ -1,7 +1,6 @@
 package com.masters.coding.student.model;
 
 import com.masters.coding.language.model.Language;
-import com.masters.coding.teacher.model.Teacher;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -17,7 +17,7 @@ public class LessonRepository {
     @PostConstruct
     private static void init() {
         Lesson lesson1 = Lesson.builder()
-                .id(1).build();
+                .id(1L).build();
         dummyLessonDb.add(lesson1);
     }
 }

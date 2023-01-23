@@ -3,6 +3,7 @@ package com.masters.coding.lesson.model;
 import com.masters.coding.student.model.Student;
 import com.masters.coding.teacher.model.Teacher;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,6 +18,7 @@ Jeśli chcesz oznaczyć klasę jako jednostkę JPA, powinieneś użyć tej adnot
 */
 @Getter
 @Setter
+@Builder
 public class Lesson {
     @Id /*
 Adnotacja @Idsłuży do oznaczenia pola jako klucza podstawowego encji w aplikacji JPA (Java Persistence API). Służy do wskazania, że ​​pole jest unikalnym identyfikatorem jednostki i będzie używane jako klucz podstawowy w tabeli bazy danych odpowiadającej jednostce.

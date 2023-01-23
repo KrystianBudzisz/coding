@@ -1,10 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Nauczyciele</title>
 </head>
 <body>
-DUPA
+<h1>Nauczyciele</h1>
+</br>
+
+<p2><a href="/teachers/create">dodaj</a></p2>
+</br>
+</br>
+<table> <!-- Tabela  -->
+    <thead> <!-- Naglowek  -->
+<tr> <!-- Wiersz  -->
+<th>ID</th> <!-- Komorka  -->
+<th>Imię</th> <!-- Komorka  -->
+<th>Nazwisko</th> <!-- Komorka  -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        th:each="teacher : ${teachers}">
+        <td th:text="${teacher.id}"></td>
+        <td th:text="${teacher.firstName}"></td>
+        <td th:text="${teacher.lastName}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

@@ -6,13 +6,12 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
-import java.util.Set;
 
 @AllArgsConstructor //
 @NoArgsConstructor //
 @Getter
 @Setter
-@Builder // Budowanie konstruktora bez pozostalych wartosci np tylko z id
+@Builder //Budowanie konstruktora bez pozostalych wartosci np tylko z id
 @Entity
 public class Teacher {
     @Id

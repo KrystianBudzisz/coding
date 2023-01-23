@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository //adnotacja do usunięcia w momencie zmiany repository na interface
-public class TeacherRepository  {
+public class TeacherRepository {
 
     private static final List<Teacher> dummyTeacherDb = new ArrayList<>();
 
@@ -31,6 +31,7 @@ public class TeacherRepository  {
         dummyTeacherDb.add(teacher1);
         dummyTeacherDb.add(teacher2);
     }
+
 
 }
 
